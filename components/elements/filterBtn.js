@@ -32,6 +32,7 @@ ${props => props.active === true ?
 background-color: #E2574C;
 border: 0;
 border-radius: 3px;
+border: 3px solid transparent;
 box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 color: #FFFFFF;
 cursor: pointer;
@@ -50,7 +51,9 @@ text-transform: uppercase;
 
 :
 
-`border-color: #fff;
+`
+
+border-color: #fff;
 background-color: transparent !important;
 border: 3px solid white;
 border-radius: 3px;

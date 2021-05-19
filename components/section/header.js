@@ -5,9 +5,6 @@ import {useEffect} from 'react';
 
 const Header = ({tags, selected, SetSelected}) => {
 
-
-
-
     return (
 
         <HeaderStyled>
