@@ -1,10 +1,27 @@
 import styled from 'styled-components'
+import Header from '../components/section/header';
+import Results from '../components/section/results';
+import {getDatabase} from '../api/notion';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const Index = ({data}) => {
 
-export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <>
+    <Header />
+    <Results hobbies={data} />
+    </>
+  )
+}
+
+export default Index;
+
+
+
+export async function getServerSideProps(context){
+  const data = await getDatabase(process.env.NOTION_DATABASE_ID);
+  console.log(data)
+
+  return {props: {
+    data
+  }};
 }
