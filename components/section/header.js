@@ -1,20 +1,24 @@
 import styled from 'styled-components';
 import Container from '../layouts/container';
 import FilterButton from '../elements/filterBtn';
+import {useEffect} from 'react';
 
-const Header = () => {
+const Header = ({tags, selected, SetSelected}) => {
+
+
+
 
     return (
 
         <HeaderStyled>
             <Container>
                 <img src="/logo.png" />
-                <h1>Use the filter to find your perfect new hobby</h1>
-
+                <h1>Hobby Tool Prototype</h1>
                 <FilterListStyled>
-                    
+                  {tags.map((tag, idx) => (
+            <FilterButton SetSelected={SetSelected} Selected={selected} key={idx} hobby={tag} />
+        ))}
                 </FilterListStyled>
-
             </Container>
         </HeaderStyled>
     )
