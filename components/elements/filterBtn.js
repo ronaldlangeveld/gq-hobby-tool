@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 
-const FilterButton = () => {
+const FilterButton = ({hobby, active, key, SetSelected, Selected}) => {
+
+    const SelectTag = (e) => {
+        const item = e.target.dataset['item']
+        if(Selected.includes(item)){
+            SetSelected(Selected.filter(itm => itm !== item));
+        } else {
+            SetSelected(Selected => [...Selected, item]);
+        }
+    };
 
     return(
 
-        <ButtonStyled>
-            Being Active
+        <ButtonStyled active={Selected.includes(hobby)} onClick={SelectTag} data-item={hobby}>
+            {hobby}
         </ButtonStyled>
 
     )
@@ -15,7 +24,9 @@ const FilterButton = () => {
 export default FilterButton
 
 const ButtonStyled = styled.button`
-${props => props.active ?
+
+
+${props => props.active === true ?
 
 `
 background-color: #E2574C;
@@ -33,7 +44,7 @@ padding: 17px 31px;
 position: relative;
 text-align: center;
 text-transform: uppercase;
-transition: 0.3s;
+// transition: 0.2s;
 -webkit-appearance: none;
 `
 
@@ -54,7 +65,7 @@ padding: 17px 31px;
 position: relative;
 text-align: center;
 text-transform: uppercase;
-transition: 0.3s;
+transition: 0.2s;
 -webkit-appearance: none;`
 
 }
