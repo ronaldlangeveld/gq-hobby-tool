@@ -2,12 +2,26 @@ import styled from 'styled-components';
 import Header from '../components/section/header';
 import Results from '../components/section/results';
 import {getDatabase} from '../api/notion';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {tags} from '../api/tags';
+import {useRouter} from 'next/router';
 
 const Index = ({data, taglist}) => {
 
-  const [selected, setSelected] = useState([]);
+  const router = useRouter();
+
+  console.log(router);
+
+  const [selected, setSelected] = useState(router.query.tags || []);
+
+  useEffect(() => {
+
+    if(selected.length > 0){
+      router.push(`/?tags=${selected}`, undefined, { shallow: true })
+    }
+
+  }, [selected])
+
 
   return (
     <>
