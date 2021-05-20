@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FilterButton = ({hobby, active, key, SetSelected, Selected}) => {
+const FilterButton = ({hobby, active, SetSelected, Selected}) => {
 
     const SelectTag = (e) => {
         const item = e.target.dataset['item']
@@ -47,6 +47,7 @@ text-align: center;
 text-transform: uppercase;
 // transition: 0.2s;
 -webkit-appearance: none;
+
 `
 
 :
@@ -72,6 +73,5 @@ transition: 0.2s;
 -webkit-appearance: none;`
 
 }
-
 
 `
