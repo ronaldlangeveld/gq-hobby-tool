@@ -55,6 +55,10 @@ width: 150px;
 background-position: center;
 background-size: cover;
 border-radius: 10px;
+@media(max-width: 764px){
+    width: 100%;
+    height: 300px;
+}
 }
 
 .content {
@@ -75,23 +79,20 @@ border-radius: 10px;
 .tag {
     background-color: ${({ theme }) => theme.colors.primary};
     border-radius: 8px;
-    padding: 8px 16px 7px;
+    padding: 4px 8px 3px;
     margin-top: 10px;
     margin-right: 10px;
     display: inline-flex;
     white-space: nowrap;
     cursor: pointer;
     //styleName: Body/B2 · Work Sans Medium;
-    font-size: 13px;
+    font-size: 10px;
     font-style: normal;
     font-weight: bold;
     line-height: 21px;
     letter-spacing: -0.02em;
     text-align: left;
     color: white;
-
-    
-
 }
 
 }
