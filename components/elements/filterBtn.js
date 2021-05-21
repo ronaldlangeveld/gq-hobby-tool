@@ -55,7 +55,7 @@ text-transform: uppercase;
 `
 
 border-color: #fff;
-background-color: transparent !important;
+background-color: transparent;
 border: 3px solid white;
 border-radius: 3px;
 color: white;
@@ -73,5 +73,19 @@ transition: 0.2s;
 -webkit-appearance: none;`
 
 }
+
+&&:hover{
+    background-color: #E2574C;
+}
+
+
+@media(max-width: 764px){
+    width: 100%;
+
+}
+
+
+
+
 
 `
