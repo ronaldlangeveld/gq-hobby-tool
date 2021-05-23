@@ -74,14 +74,16 @@ transition: 0.2s;
 
 }
 
-&&:hover{
+@media(min-width: 768px){
+    &&:hover{
     background-color: #E2574C;
+}
 }
 
 
-@media(max-width: 764px){
+@media(max-width: 768px){
     width: 100%;
-
+    
 }
 
 
