@@ -82,7 +82,25 @@ transition: 0.2s;
 
 
 @media(max-width: 768px){
-    width: 100%;
+    /* background-color: #E2574C;
+border: 0;
+border-radius: 3px; */
+/* border: 3px solid transparent; */
+/* box-shadow: 0 2px 4px rgba(0,0,0,0.2); */
+/* color: #FFFFFF; */
+cursor: pointer;
+font-size: inherit;
+font-family: inherit;
+display: inline-block;
+font-style: normal;
+font-weight: bold;
+padding: 7px 15px;
+font-size: 13px;
+/* position: relative;
+text-align: center;
+text-transform: uppercase; */
+// transition: 0.2s;
+/* -webkit-appearance: none; */
     
 }
 
