@@ -39,7 +39,7 @@ text-align: center;
 
 h1 {
     color: ${({ theme }) => theme.colors.light};
-    font-size: 36px;
+    font-size: 28px;
 }
 
 `
