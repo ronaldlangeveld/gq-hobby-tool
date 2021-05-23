@@ -2,26 +2,31 @@ import Container from '../layouts/container';
 
 import styled from 'styled-components';
 
-const Results = ({ hobbies }) => {
+const Results = ({ hobbies, selected }) => {
 
-console.log(hobbies);
+
+    const HobbiesList = () => (
+        hobbies.map((item, index) => (
+            <HobbyItemStyled key={index}>
+                <div className="hobbyImg" style={{backgroundImage: `url(https://source.unsplash.com/${item.properties.Unsplash_id.rich_text[0].plain_text})`}}></div>
+                <div className="content">
+                <h1>{item.properties.Name.title[0].plain_text}</h1>
+                <div className="description">{item.properties.Description.rich_text[0].plain_text}</div>
+                {item.properties.Tags.multi_select.map((tag, idx) => (
+                    <span key={idx} className="tag">{tag.name}</span>
+                ))}
+                </div>
+            </HobbyItemStyled>
+        ))
+    )
+
+
 
     return (
         <ResultsStyled>
             <Container>
-                {hobbies.map((item, index) => (
-                    <HobbyItemStyled key={index}>
-                        <div className="hobbyImg" style={{backgroundImage: `url(https://source.unsplash.com/${item.properties.Unsplash_id.rich_text[0].plain_text})`}}></div>
-                        <div className="content">
-                        <h1>{item.properties.Name.title[0].plain_text}</h1>
-                        <div className="description">{item.properties.Description.rich_text[0].plain_text}</div>
-                        {item.properties.Tags.multi_select.map((tag, idx) => (
-                            <span key={idx} className="tag">{tag.name}</span>
-                        ))}
-                        </div>
-                        
-                    </HobbyItemStyled>
-                ))}
+                {hobbies.length && selected.length > 0 ? <HobbiesList /> : <DefaultText>Welcome to the hobby tool! <br/> To get started, select some of the filters above</DefaultText>}
+                {hobbies.length === 0 && selected.length > 0 ? <DefaultText>Sorry, we couldn't hobbies matching this criteria.</DefaultText> : <></>}
             </Container>
         </ResultsStyled>
 
@@ -96,4 +101,11 @@ border-radius: 10px;
 
 }
 
+`
+
+const DefaultText = styled.h1`
+margin: auto;
+text-align: center;
+font-size: center;
+max-width: 500px;
 `
