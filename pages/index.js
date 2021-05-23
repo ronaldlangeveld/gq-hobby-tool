@@ -36,7 +36,7 @@ console.log(hobbyList);
   return (
     <>
     <Header SetSelected={setSelected} selected={selected} tags={taglist} />
-    <Results hobbies={selected.length > 0 ? filteredHobby : hobbyList} />
+    <Results selected={selected} hobbies={selected.length > 0 ? filteredHobby : hobbyList} />
     </>
   )
 }

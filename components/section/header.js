@@ -10,7 +10,8 @@ const Header = ({tags, selected, SetSelected}) => {
         <HeaderStyled>
             <Container>
                 <img src="/logo.png" />
-                <h1>Hobby Tool Prototype</h1>
+                <h1>Find new activities to replace gaming</h1>
+                {/* <h2>Find new activities to replace gaming</h2> */}
                 <FilterListStyled>
                   {tags.map((tag, idx) => (
             <FilterButton SetSelected={SetSelected} Selected={selected} key={idx} hobby={tag} />
@@ -41,6 +42,17 @@ h1 {
     color: ${({ theme }) => theme.colors.light};
     font-size: 28px;
 }
+
+h2 {
+    color: ${({ theme }) => theme.colors.light};
+    font-size: 18px;
+}
+
+
+span.tag{
+    font-size: 12px;
+}
+
 
 `
 
