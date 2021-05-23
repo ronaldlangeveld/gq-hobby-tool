@@ -12,5 +12,5 @@ export const tags = [
     "At Home",
     "Offline",
     "Cam's Favorites",
-    "Easy To Start"
+    "Easy to Start"
   ]

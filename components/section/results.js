@@ -11,7 +11,7 @@ console.log(hobbies);
             <Container>
                 {hobbies.map((item, index) => (
                     <HobbyItemStyled key={index}>
-                        <div className="hobbyImg" style={{backgroundImage: `url(${item.properties.Image.url})`}}></div>
+                        <div className="hobbyImg" style={{backgroundImage: `url(https://source.unsplash.com/${item.properties.Unsplash_id.rich_text[0].plain_text})`}}></div>
                         <div className="content">
                         <h1>{item.properties.Name.title[0].plain_text}</h1>
                         <div className="description">{item.properties.Description.rich_text[0].plain_text}</div>
@@ -40,7 +40,6 @@ padding-top: 60px;
 `
 
 const HobbyItemStyled = styled.div`
-
 display: flex;
 flex-wrap: wrap;
 padding-top: 30px;
