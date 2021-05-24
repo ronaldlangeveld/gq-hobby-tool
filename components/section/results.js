@@ -108,4 +108,5 @@ margin: auto;
 text-align: center;
 font-size: center;
 max-width: 500px;
+
 `
