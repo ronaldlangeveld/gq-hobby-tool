@@ -55,7 +55,7 @@ export default class CustomDocument extends Document {
   <link rel='stylesheet' id='marketers-delight-typekit-css'  href='https://use.typekit.net/zgz6cbf.css?ver=5.7.2' type='text/css' media='all' />
   <link rel="icon" 
       type="image/png" 
-      href="/icon.png"></link>
+      href="/hobby-tool/icon.png"></link>
         </Head>
         <body>
           <Main />
