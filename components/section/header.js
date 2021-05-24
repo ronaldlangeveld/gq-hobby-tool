@@ -9,7 +9,7 @@ const Header = ({tags, selected, SetSelected}) => {
 
         <HeaderStyled>
             <Container>
-                <img src="/hobby-tool/logo.png" />
+                <img src="/logo.png" />
                 <h1>Find new activities to replace gaming</h1>
                 {/* <h2>Find new activities to replace gaming</h2> */}
                 <FilterListStyled>
