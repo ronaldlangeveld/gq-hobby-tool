@@ -47,6 +47,14 @@ export default Index;
 
 export async function getStaticProps(context){
   const data = await getDatabase(process.env.NOTION_DATABASE_ID);
+
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
   const taglist = [
     "Being Active",
     "Achievement",
