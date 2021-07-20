@@ -1,3 +1,3 @@
 module.exports = {
-    basePath: '/hobby-tool',
+    basePath: '/hbt',
   }
