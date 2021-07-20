@@ -25,7 +25,7 @@ const Results = ({ hobbies, selected }) => {
     return (
         <ResultsStyled>
             <Container>
-                {hobbies.length && selected.length > 0 ? <HobbiesList /> : <DefaultText>Welcome to the hobby tool! <br/> To get started, select some of the filters above</DefaultText>}
+                {hobbies.length && selected.length > 0 ? <HobbiesList /> : <DefaultText>To get started, select some of the filters above</DefaultText>}
                 {hobbies.length === 0 && selected.length > 0 ? <DefaultText>Sorry, we couldn't hobbies matching this criteria.</DefaultText> : <></>}
             </Container>
         </ResultsStyled>
@@ -70,7 +70,7 @@ border-radius: 10px;
   max-width: 600px;
 
     h1 {
-    margin-top: 0;
+    /* margin-top: 0; */
     font-size: 24px;
 }
 
@@ -106,7 +106,8 @@ border-radius: 10px;
 const DefaultText = styled.h1`
 margin: auto;
 text-align: center;
-font-size: center;
+font-size: 14px;
 max-width: 500px;
+
 
 `

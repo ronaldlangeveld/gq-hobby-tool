@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
   body{
     position: relative;
     font-size: 1.4rem;
-    /* line-height: 2.1rem; */
     font-family: "jaf-domus";
     margin:0;
     -webkit-font-smoothing: antialiased;
